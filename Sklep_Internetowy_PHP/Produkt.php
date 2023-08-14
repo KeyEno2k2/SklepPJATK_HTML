@@ -125,7 +125,7 @@ session_start();
             $_SESSION['Produkt_TYP'] = $typ;
         }
 
-        $conn = new mysqli("localhost", "root","#JebacKurwy1969","projektrbd");
+        $conn = new mysqli("localhost", "root","xxx","projektrbd");
         $sql = "SELECT * FROM produkty WHERE Nazwa ='".$nazwa."' AND Typ_ID = ".$typ;
         $result = $conn -> query($sql);
 
