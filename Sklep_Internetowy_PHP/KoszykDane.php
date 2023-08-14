@@ -132,7 +132,7 @@ if(isset($_SESSION['ERROR1'])){
             <h3 class="mb-4 text-secondary">Wybierz Wojewodztwo:</h3>
             <select class="form-select-lg mb-3" name="WOJEWODZTWO">
             <?php
-                $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+                $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
                 $sql = "SELECT * FROM wojewodztwo";
                 $result = $conn -> query($sql);
 
@@ -148,7 +148,7 @@ if(isset($_SESSION['ERROR1'])){
             <h3 class="mb-4 text-secondary">Wybierz Rodzaj Płatności:</h3>
             <select class="form-select-lg mb-3" name="PLATNOSC">
                 <?php
-                $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+                $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
                 $sql = "SELECT * FROM rodzaj_platnosci";
                 $result = $conn -> query($sql);
 
@@ -164,7 +164,7 @@ if(isset($_SESSION['ERROR1'])){
             <h3 class="mb-4 text-secondary">Wybierz Rodzaj Dostawy:</h3>
             <select class="form-select-lg mb-3" name="DOSTAWA">
                 <?php
-                $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+                $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
                 $sql = "SELECT * FROM dostawa";
                 $result1 = $conn -> query($sql);
 
@@ -179,7 +179,7 @@ if(isset($_SESSION['ERROR1'])){
 
     <div class="mt-3">
         <?php
-        $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+        $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
         if (isset($_POST['IMIE']) && ($_POST['NAZWISKO']) && ($_POST['ULICA']) && ($_POST['NR_DOMU']) && ($_POST['NR_MIESZKANIA']) && ($_POST['WOJEWODZTWO']) && ($_POST['MIEJSCOWOSC'])) {
             if ((empty($_POST['IMIE']) || empty($_POST['NAZWISKO']) || empty($_POST['ULICA']) || empty($_POST['NR_DOMU']) || empty($_POST['NR_MIESZKANIA']) || empty($_POST['WOJEWODZTWO']) || empty($_POST['MIEJSCOWOSC']))) {
                 echo "<h1>Wprowadź Wszystkie Dane !!!</h1>";
