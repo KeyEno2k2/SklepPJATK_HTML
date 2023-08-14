@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn=new mysqli('localhost','root','#JebacKurwy1969','projektrbd');
+$conn=new mysqli('localhost','root','xxx','projektrbd');
 if($conn->connect_error)
 {
     die("Nieudane połączenie ". $conn->connect_error);
