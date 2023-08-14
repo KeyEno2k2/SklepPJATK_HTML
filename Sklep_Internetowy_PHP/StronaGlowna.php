@@ -120,7 +120,7 @@ session_start();
     <p></p>
     <?php
     $_SESSION['Laptop'] = 25;
-    $conn = new mysqli("localhost", "root","#JebacKurwy1969","projektrbd");
+    $conn = new mysqli("localhost", "root","xxx","projektrbd");
     $sql = "SELECT * FROM produkty WHERE ID = 25";
     $result = $conn -> query($sql);
 
