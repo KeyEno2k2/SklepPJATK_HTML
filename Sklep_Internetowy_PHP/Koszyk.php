@@ -170,7 +170,7 @@ function refresh2($id_basket, $id_produkt){
 <?php
 function add_basket(){
     if (!create_basket()) {
-        $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+        $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
         if ($conn -> connect_error) {
             die("Nieudane połączenie " . $conn->connect_error);
         }
@@ -188,7 +188,7 @@ function add_basket(){
     }
 }
 function check_ilosc($id){
-    $conn2 = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+    $conn2 = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
     $sql4 = "SELECT * FROM assoc_koszyk_produkty WHERE Koszyk_ID =".$_SESSION['Basket']." AND Produkty_ID =".$id;
     $result = $conn2 -> query($sql4);
     if($result -> num_rows > 0){
@@ -212,7 +212,7 @@ function add_item($id)
     if(isset($id)){
 
         if(!refresh($_SESSION['Basket'], $_POST['KOSZYK_ADD'])){
-    $conn2 = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+    $conn2 = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
     if ($conn2 -> connect_error) {
         die("Nieudane połączenie " . $conn2->connect_error);
     }
@@ -237,7 +237,7 @@ function show_basket(){
     if(!isset($_SESSION['Basket'])){
         echo "<center><h1 style='margin-left: 780px'>Twój Koszyk jest Pusty</h1></center>";
     }else if(isset($_SESSION['Basket'])){
-    $conn = new mysqli("localhost", "root", "#JebacKurwy1969", "projektrbd");
+    $conn = new mysqli("localhost", "root", "xxx", "projektrbd");
     $sql = "SELECT p.Nazwa as nazwa,p.Cena as cena, akp.ilosc as ilosc, akp.Produkty_ID as PIT FROM koszyk inner join assoc_koszyk_produkty akp on koszyk.ID = akp.Koszyk_ID inner join produkty p on akp.Produkty_ID = p.ID WHERE Koszyk_ID = ".$_SESSION['Basket'];
     $result = $conn -> query($sql);
     if($result -> num_rows > 0){
@@ -276,7 +276,7 @@ show_basket();
 </div>
 <div>
     <?php
-    $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+    $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
     ?>
     <form method="post" action="KoszykDane.php">
         <center><button name="ZAMOW" style="width: 50%">Zamów</button></center>
