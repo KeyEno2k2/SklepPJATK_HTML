@@ -136,16 +136,14 @@ session_start();
     if (isset($_POST['typ'])){
         $_SESSION['typ'] = $_POST['typ'];
     }
-    //$conn = new mysqli("localhost", "root","#JebacKurwy1969","projektrbd");
-    //$sql = "SELECT * FROM produkty WHERE Cena DESC";
-    //$result = $conn -> query($sql);
+    
     ?>
     <?php
     if (isset($_SESSION['Produkt']) && isset($_SESSION['Produkt_TYP'])){
         unset($_SESSION['Produkt']);
         unset($_SESSION['Produkt_TYP']);
     }
-    $conn = new mysqli("localhost", "root","#JebacKurwy1969","projektrbd");
+    $conn = new mysqli("localhost", "root","xxx","projektrbd");
     $sql = "SELECT * FROM typ WHERE Rodzaj = '".$_SESSION['typ']."'";
     $result = $conn -> query($sql);
 
@@ -159,7 +157,7 @@ session_start();
         $_POST['OD'] = $a;
     }
         }
-    $conn = new mysqli("localhost", "root","#JebacKurwy1969","projektrbd");
+    $conn = new mysqli("localhost", "root","xxx","projektrbd");
     if (isset($_POST['CENA'])){
         $sql = "SELECT * FROM produkty inner join typ on typ.id = Typ_ID WHERE TYP_ID = '" .$jajko['ID']."' ORDER BY Cena ".$_POST['CENA'];
 
