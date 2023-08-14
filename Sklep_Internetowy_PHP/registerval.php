@@ -19,7 +19,7 @@ function password_validation($pass,$pass2)
 }
 function check_if_exist($login,$email)
 {
-    $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+    $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
     if ($conn->connect_error) {
         die("Nieudane połączenie " . $conn->connect_error);
     }
@@ -47,7 +47,7 @@ function check_if_exist($login,$email)
 if(isset($_POST['Imie']) && isset($_POST['Email']) && isset($_POST['Haslo']) && isset($_POST['Haslo2']))
 {if(password_validation($_POST['Haslo'],$_POST['Haslo2']))
 {
-    $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+    $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
     if ($conn->connect_error) {
         die("Nieudane połączenie " . $conn->connect_error);
     }
