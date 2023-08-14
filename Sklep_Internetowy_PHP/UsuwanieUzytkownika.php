@@ -119,7 +119,7 @@ session_start();
             <div class="mb-3 col-md">
                 <select class="form-select-lg mb-3" name="UZYTKOWNIK" aria-label="Typ Produktu">
                     <?php
-                    $conn = new mysqli("localhost", "root","#JebacKurwy1969","projektrbd");
+                    $conn = new mysqli("localhost", "root","xxx","projektrbd");
                     $sql = "SELECT * FROM klient WHERE ID != 12";
                     $result = $conn -> query($sql);
 
@@ -134,7 +134,7 @@ session_start();
             </div>
             <div class="mt-3" style="margin-bottom: 100px">
                 <?php
-                $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+                $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
                 if(isset($_POST['UZYTKOWNIK'])){
                     $sql="DELETE FROM klient WHERE ID ='".$_POST['UZYTKOWNIK']."'";
                     if($conn -> query($sql) === TRUE){
