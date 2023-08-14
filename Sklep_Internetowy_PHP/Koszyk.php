@@ -134,7 +134,7 @@ function create_basket(){
     }
 }
 function refresh($id_basket, $id_produkt){
-    $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+    $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
     $sql = "SELECT * FROM assoc_koszyk_produkty WHERE Koszyk_ID =".$id_basket." AND Produkty_ID =".$id_produkt;
     $result = $conn -> query($sql);
     if($result -> num_rows > 0){
@@ -145,7 +145,7 @@ function refresh($id_basket, $id_produkt){
     }
 }
 function refresh2($id_basket, $id_produkt){
-    $conn = new mysqli('localhost', 'root', '#JebacKurwy1969', 'projektrbd');
+    $conn = new mysqli('localhost', 'root', 'xxx', 'projektrbd');
     $sql = "SELECT * FROM assoc_koszyk_produkty WHERE Koszyk_ID =".$id_basket." AND Produkty_ID =".$id_produkt;
     $result = $conn -> query($sql);
     if($result -> num_rows > 0){
