@@ -130,7 +130,7 @@ session_start();
 
                 <select class="form-select-lg mb-3" name="PRODUCENT" aria-label="Producent Produktu">
                     <?php
-                    $conn = new mysqli("localhost", "root","#JebacKurwy1969","projektrbd");
+                    $conn = new mysqli("localhost", "root","xxx","projektrbd");
                     $sql = "SELECT * FROM producent";
                     $result = $conn -> query($sql);
 
